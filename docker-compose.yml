@@ -17,6 +17,7 @@ services:
   web:
     build: .
     image: akhmed12/site_statistic:v1
+    command: ./start.sh
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value,
