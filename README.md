@@ -1,1 +1,1 @@
-# staticsite
+# statistic_website
