@@ -12,10 +12,10 @@ from .models import *
 class MyLoginView(LoginView):
     template_name = "users/login.html"
     form_class = CustomUserForm
+    redirect_authenticated_user = True
     success_url = reverse_lazy('statistic_app:index')
     def get_success_url(self) -> str:
         return self.success_url
-
 
 
 class MyRegisterView(CreateView):
@@ -24,8 +24,6 @@ class MyRegisterView(CreateView):
     form_class = CustomUserForm
     success_url = reverse_lazy("users:login_page")
     success_msg = 'Пользователь создан'
-
-
 
 
 def log_out(request):

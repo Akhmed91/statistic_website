@@ -15,9 +15,9 @@ services:
     env_file:
       - ./.env
   web:
-    build: .
-    image: akhmed12/site_statistic:v1
-    command: ./start.sh
+    # build: ./app/
+    image: akhmed12/site_statistic:v1.3
+    # command: ./start.sh
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value,
@@ -39,7 +39,7 @@ services:
 
     # запросы с внешнего порта 80 перенаправляем на внутренний порт 80
     ports:
-      - "80:80"
+      - "70:80"
 
     volumes:
       # При сборке скопировать созданный конфиг nginx из исходной директории

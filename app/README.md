@@ -1,2 +1,2 @@
 # statistic_website
-scp /nginx pi@raspberrypi.local:
+scp /nginx pi@raspberrypi.local:/statistiksite/
